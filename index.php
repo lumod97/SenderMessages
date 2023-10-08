@@ -92,19 +92,20 @@
 
 
 <?php
-if (isset($_POST['enviar'])) {
+// phpinfo();
+//if (isset($_POST['enviar'])) {
     // Coloca aquí tu código PHP para enviar mensajes
     // $nombre = $_POST['nombre'];
     // $email = $_POST['email'];
-    $telefono = $_POST['telefono'];
-    $mensaje = $_POST['mensaje'];
-    echo $telefono;
-    echo $mensaje;
+    $telefono = '51946027276';
+    $mensaje = 'holi';
+    // echo $telefono;
+    // echo $mensaje;
     
     // Realiza el envío del mensaje aquí
-    $url = 'https://graph.facebook.com/v17.0/133997583125112/messages';
+    $url = 'https://graph.facebook.com/v17.0/151814038007859/messages';
 
-    $token = 'EAAOXxdZBouLMBO7YXWrnAfcOuGBkCUmBk7TvYh9nPbVHTb2xz818JIZAU7s2MZCc972dlL7pbvccx1R5Y15C9FFs0aLPjbklRiZC7s2FLaOuh7FyxZCstqeTAaW2XI5RsH6B3RuDn9FrhO5dCLy87zcu4d5qrlqxxi3llIq1D1yYtu6Yi8ZAbcLM84bBvH6DvOGm695oqpkxgfXtG3DXgZD';
+    $token = 'EAANFdtB33pwBO1iJkAanGxg0o2ZCgdjE5AH5KKjPJ3uJssuaaGM6JAUZA7wwbymlulAe84UJfjNy2Ba0TYei5JZAxdcyPVhM3dDEPqd6qiHBZAjLpaY2xd92HZANKGfE6rG347Vv3OPKgz9nI5LCnkQAw6MCiLKxZCGDKffxUkmL8hoU0jQ6G2tChbpwskpZCEigLrG3YmQ3Bo4vfavInzlLYMWJGMZD';
 
     $message = ''
         . '{'
@@ -135,5 +136,5 @@ if (isset($_POST['enviar'])) {
     $status_code = curl_getinfo($curl, CURLINFO_HTTP_CODE);
 
     curl_close($curl);
-}
+//}
 ?>
